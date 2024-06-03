@@ -1,10 +1,16 @@
+import { useState } from "react";
 import Contact from "./components/Contact";
-import Hello from "./components/Hello";
-
+import ContactList from "./components/ContactList";
 function App() {
+  const [renderContacts, setRenderContacts] = useState([]);
+  const contactProp = (data) => {
+    setRenderContacts([...renderContacts, data]);
+  };
+
   return (
     <>
-      <Contact />
+      <Contact contactProp={contactProp} />
+      <ContactList renderContacts={renderContacts} />
     </>
   );
 }
