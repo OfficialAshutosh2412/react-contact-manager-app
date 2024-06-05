@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../App.css";
+import "../index.css";
 
 function Contact({ contactProp }) {
   const [contactInfo, setContactInfo] = useState({

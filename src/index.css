@@ -5,5 +5,9 @@
 }
 
 body {
-  background: #1a1422;
+  background: #191d32;
+}
+.cross-btn {
+  right: -10px;
+  top: -10px;
 }
