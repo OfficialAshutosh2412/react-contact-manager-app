@@ -22,17 +22,18 @@ function Contact({ contactProp }) {
       return;
     }
     contactProp(contactInfo);
+    setContactInfo({ name: "", email: "" });
   };
 
   return (
-    <form className="w-4/5 mx-auto mt-5 p-4 rounded-xl shadow-xl shadow-purple-500/50 ">
+    <form className="w-4/5 mx-auto mt-5 p-4 rounded-xl shadow-xl shadow-purple-900/50 ">
       <div className=" mt-5 mb-5 rounded-lg h-32 flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-5 text-2xl text-white">
         <h1>
           <i className="fa-solid fa-id-card-clip text-xl"></i> Contact Manager
         </h1>
       </div>
-      <div className="flex w-5/5 gap-5">
-        <div className="mb-5 w-full">
+      <div className="flex md:flex-row flex-col w-5/5 gap-5">
+        <div className=" w-full">
           <label
             htmlFor="username"
             className="block  text-sm font-medium text-white"
@@ -48,7 +49,7 @@ function Contact({ contactProp }) {
             className="block w-full p-2.5 bg-purple-500 text-white  border-2 border-t-transparent border-r-transparent border-l-transparent border-b-indigo-500 transition-all focus:bg-purple-900 focus:text-white rounded"
           />
         </div>
-        <div className="mb-5 w-full">
+        <div className=" w-full">
           <label
             htmlFor="useremail"
             className="block  text-sm font-medium text-white"
@@ -65,13 +66,8 @@ function Contact({ contactProp }) {
           />
         </div>
         <div>
-          <button
-            className="w-full mt-3 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
-            onClick={handleSubmit}
-          >
-            <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-              +Add contact
-            </span>
+          <button className="btn" onClick={handleSubmit}>
+            +Add
           </button>
         </div>
       </div>
